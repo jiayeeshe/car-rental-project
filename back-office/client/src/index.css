@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.carimg{
+  height:180px;
+  width: 250px;
+  border-radius: 5px;
+}

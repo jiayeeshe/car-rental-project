@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import DefaultLayout from '../components/DefaultLayout'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser } from '../redux/state/User/userSlice'
 import { useNavigate } from 'react-router-dom'
+import { loginAdmin } from '../redux/state/Admin/adminSlice'
 export const Login = () => {
-  const user = useSelector(state => state.users)
+  const admin = useSelector(state => state.admins)
 
 
   const dispatch = useDispatch();
-  const [username, setUsername] = useState('');
+  const [adminID, setAdminID] = useState('');
   const [password, setPassword] = useState('');
 
   const navigate = useNavigate(); // Hook for navigation
@@ -16,14 +16,14 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Form submission logic here
-    const resultAction = await dispatch(loginUser({username,password}));
+    const resultAction = await dispatch(loginAdmin({adminID,password}));
     // Check the result of the dispatched action
-    if (loginUser.fulfilled.match(resultAction)) {
+    if (loginAdmin.fulfilled.match(resultAction)) {
       // Navigate if the login is successful
       if (resultAction.payload.success) {
         navigate('/');
       }
-    } else if (loginUser.rejected.match(resultAction)) {
+    } else if (loginAdmin.rejected.match(resultAction)) {
       console.log("Login failed", resultAction.payload);
     }
     
@@ -38,14 +38,14 @@ export const Login = () => {
               <h3 className="text-center">Login</h3>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                <label htmlFor="username" className="form-label">Username</label>
+                <label htmlFor="username" className="form-label">Admin</label>
                   <input
                     type="text"
                     className="form-control"
                     id="username"
-                    placeholder="Enter username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="Enter Admin ID"
+                    value={adminID}
+                    onChange={(e) => setAdminID(e.target.value)}
                     required
                   />
                 </div>
@@ -61,10 +61,10 @@ export const Login = () => {
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-primary w-100" disabled={user.isLoading}>
-                  {user.isLoading ? "Loading..." : "login"}
+                <button type="submit" className="btn btn-primary w-100" disabled={admin.isLoading}>
+                  {admin.isLoading ? "Loading..." : "login"}
                 </button>
-                <p className='text-danger text-center'>{user.error && user.error.message}</p>
+                <p className='text-danger text-center'>{admin.error && admin.error.message}</p>
               </form>
             </div>
           </div>

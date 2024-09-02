@@ -29,7 +29,7 @@ const CarSchema = new mongoose.Schema({
             _id: false,
         }
        ],
-    rentPerHour: {
+    rentPerDay: {
         type: Number,
         required: true,
     },

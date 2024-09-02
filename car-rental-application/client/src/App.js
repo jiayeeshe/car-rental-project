@@ -32,11 +32,9 @@ export function ProtectedRoute({children})
 {
   const user = useSelector(state => state.users)
   if(user.isAuthenticated){
-    console.log("yes")
     return children;
   }
   else{
-    console.log("no")
 
     return <Navigate to="/login"/>
   }

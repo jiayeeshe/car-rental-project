@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route, BrowserRouter as Router, Routes, Navigate} from 'react-router-dom';
+import { Login } from './pages/Login';
+import { useSelector } from 'react-redux';
+import { Home } from './pages/Home';
+import { Update } from './pages/Update';
+import { Insert } from './pages/Insert';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<ProtectedRoute><Home/></ProtectedRoute>}/>
+          <Route path="/login" exact element={<Login/>}/>
+          <Route path='/update' exact element={<ProtectedRoute><Update/></ProtectedRoute>}/>
+          <Route path='/insert' exact element={<ProtectedRoute><Insert/></ProtectedRoute>}/>
+
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+export function ProtectedRoute({children})
+{
+  const admin = useSelector(state => state.admins)
+  if(admin.isAuthenticated){
+    return children;
+  }
+  else{
+
+    return <Navigate to="/login"/>
+  }
+}
