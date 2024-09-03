@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
 import Cookies from 'js-cookie';
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 axios.defaults.withCredentials = true; // Allow cookies to be sent with requests
 
 
@@ -19,7 +20,7 @@ export const loginAdmin = createAsyncThunk(
             const adminID = params.adminID;
             const password = params.password;
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const response = await axios.post('http://localhost:3001/api/admins/login', {adminID, password});
+            const response = await axios.post(`${backendUrl}/api/admins/login`, {adminID, password});
             return response.data;
         } catch (err){
             return thunkAPI.rejectWithValue(err.response.data);
@@ -34,7 +35,7 @@ export const updateCarDetails = createAsyncThunk(
         try{
             const {carId, modifiedFields} = params;
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const response = await axios.put(`http://localhost:3001/api/admins/updateCarDetails/${carId}`, modifiedFields);
+            const response = await axios.put(`${backendUrl}/api/admins/updateCarDetails/${carId}`, modifiedFields);
             return response.data;
         } catch (err){
             return thunkAPI.rejectWithValue(err.response.data);
@@ -50,7 +51,7 @@ export const insertNewCar = createAsyncThunk(
             console.log(params)
             const request = params;
             await new Promise(resolve => setTimeout(resolve, 3000));
-            const response = await axios.post(`http://localhost:3001/api/admins/insertNewCar`, request);
+            const response = await axios.post(`${backendUrl}/api/admins/insertNewCar`, request);
             return response.data;
         } catch (err){
             return thunkAPI.rejectWithValue(err.response.data);
@@ -65,7 +66,7 @@ export const deleteExistingCar = createAsyncThunk(
             const carId = params;
             // car id
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const response = await axios.post(`http://localhost:3001/api/admins/deleteExistingCar/${carId}`);
+            const response = await axios.post(`${backendUrl}/api/admins/deleteExistingCar/${carId}`);
             return response.data;
         } catch (err){
             return thunkAPI.rejectWithValue(err.response.data);

@@ -3,7 +3,7 @@ import DefaultLayout from '../components/DefaultLayout'
 import { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import axios from 'axios';
-
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 export const Register = () => {
 
   const [username, setUsername] = useState('');
@@ -27,7 +27,7 @@ export const Register = () => {
     else {
       try{
 
-      const response = await axios.post("http://localhost:3001/api/users/register", {username,email,password});
+      const response = await axios.post(`${backendUrl}/api/users/register`, {username,email,password});
       alert(response.data.message);
       console.log(response.data.message);
       navigate('/login');

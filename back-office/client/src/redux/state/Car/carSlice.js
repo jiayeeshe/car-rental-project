@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const initialState = {
     cars : [],
@@ -11,7 +12,7 @@ export const getAllCars = createAsyncThunk(
     "car/getAllCars",
     async (_, thunkAPI) => {
         try{
-            const response = await axios.get('http://localhost:3001/api/cars/getallcars');
+            const response = await axios.get(`${backendUrl}/api/cars/getallcars`);
             return response.data;
         } catch (err){
             return thunkAPI.rejectWithValue(err.response.data);

@@ -8,7 +8,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from "axios";
 import {generatePDF} from '../utility/PdfGenerator';
-
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 export const BookingCar = () => {
   const { cars, isLoading } = useSelector(state=>state.cars);
@@ -94,7 +94,7 @@ export const BookingCar = () => {
     const bookCar = async (reqObj) => {
       try {
         console.log(reqObj);
-        const response = await axios.post("http://localhost:3001/api/bookings/bookcar",reqObj);
+        const response = await axios.post(`${backendUrl}/api/bookings/bookcar`,reqObj);
         if(response){ 
           navigate('/bookingsuccess');
           const req = {

@@ -6,7 +6,9 @@ const carRoutes = require('./src/routes/carRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const bookingRoutes = require('./src/routes/bookingRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
-const allowedOrigins = ['http://localhost:3002', 'http://localhost:3000']
+require('dotenv').config();
+const mongoUri = process.env.MONGODB_URI
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
 
 // Middleware
 app.use(cors({
@@ -27,16 +29,13 @@ app.use('/api/users', userRoutes);
 app.use('/api/bookings', bookingRoutes)
 app.use('/api/admins', adminRoutes);
 
-
-mongoose.connect("mongodb+srv://shejiayee:Shejiayi921*@car-rental-app.032kv.mongodb.net/car-rental-app",
+mongoose.connect(`${mongoUri}`,
   {useNewUrlParser: true}
 );
 
 
-
-
 // Start Server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port PORT`);
 });

@@ -8,7 +8,6 @@ import { BookingSuccess } from './pages/BookingSuccess';
 import { BookingHistory } from './pages/BookingHistory';
 
 import { useSelector } from 'react-redux';
-import { Test } from  './pages/Test';
 
 function App() {
   return (

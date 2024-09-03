@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
 import Cookies from 'js-cookie';
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 axios.defaults.withCredentials = true; // Allow cookies to be sent with requests
 
 
@@ -19,7 +20,7 @@ export const loginUser = createAsyncThunk(
             const username = params.username;
             const password = params.password;
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const response = await axios.post('http://localhost:3001/api/users/login', {username, password});
+            const response = await axios.post(`${backendUrl}/api/users/login`, {username, password});
             return response.data;
         } catch (err){
             return thunkAPI.rejectWithValue(err.response.data);
