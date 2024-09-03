@@ -1,5 +1,6 @@
 const UserModel = require('../models/Users');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
+
 // const cookieParser = require('cookie-parser');
 const {generateToken} = require('../jwt/jwtGenerator');
 

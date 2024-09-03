@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  backoffice-client:
+    build:
+      context: ./back-office/client  # This should be the relative path to the backoffice-client directory
+      dockerfile: Dockerfile
+    env_file: ./back-office/client/.env
+    ports:
+      - "3001:80"
+
+  carapplication-client:
+    build:
+      context: ./car-rental-application/client  # Make sure this is correct and matches the folder structure
+      dockerfile: Dockerfile
+    env_file: ./car-rental-application/client/.env
+    ports:
+      - "3000:80"
+
+  carapplication-server:
+    build:
+      context: ./car-rental-application/server  # Ensure this points to the car-rental-application/server directory
+      dockerfile: Dockerfile
+    env_file: ./car-rental-application/server/.env
+    ports:
+      - "5000:3000"
