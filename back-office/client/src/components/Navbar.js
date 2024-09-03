@@ -19,23 +19,28 @@ const Navbar = () => {
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mb-md-0">
                                 <li className="nav-item">
-                                <Link to="/" className="nav-link active d-flex justify-content-center">Home</Link>
+                                <Link to="/" className="nav-link active d-flex justify-content-center">HOME</Link>
                                 </li>
                                 {!admin.isAuthenticated &&
                                 <li className="nav-item">
-                                <Link to="/login" className="nav-link active d-flex justify-content-center">Login</Link>
+                                <Link to="/login" className="nav-link active d-flex justify-content-center">LOGIN</Link>
                                 </li>
                                 }
                                 {admin.isAuthenticated &&
                                 <li className="nav-item">
-                                <Link to="/update" className="nav-link active d-flex justify-content-center">Update</Link>
+                                <Link to="/insert" className="nav-link active d-flex justify-content-center">INSERT</Link>
+                                </li>
+                                }      
+                                {admin.isAuthenticated &&
+                                <li className="nav-item">
+                                <Link to="/update" className="nav-link active d-flex justify-content-center">UPDATE</Link>
                                 </li>
                                 }                                
                                 {admin.isAuthenticated &&
                                 <li className="nav-item">
-                                <Link to="/insert" className="nav-link active d-flex justify-content-center">Insert</Link>
+                                <Link to="/delete" className="nav-link active d-flex justify-content-center">DELETE</Link>
                                 </li>
-                                }                                
+                                }                            
                             </ul>
                                 {admin.isAuthenticated &&
                             <div className='d-lg-flex d-md-flex justify-content-lg-end justify-content-md-center'>

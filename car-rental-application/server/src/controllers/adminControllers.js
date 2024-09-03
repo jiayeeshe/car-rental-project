@@ -72,26 +72,90 @@ exports.register = async (req,res) =>{
   
   exports.updateCarDetails = async (req,res) =>{
     try{
+    const admin_id = req.user.id;
+    const role = req.user.role;
     const carId = req.params.carId;
-    console.log(`req.body ${req.body}`);
     const modifiedData = req.body
-    console.log(`modified data: ${JSON.stringify(modifiedData, null, 2)}`);
-    console.log(`car id is ${carId}`);
-     // Update only the modified fields
+
+     // Update only the modified fields with authenticated role
+     if(admin_id && role){
+      if(role==="super_admin"){
      const updatedCar = await CarModel.findByIdAndUpdate(
       carId,
       { $set: modifiedData },
       { new: true } // Return the updated document
     );
-    console.log(updatedCar);
-    
     if (!updatedCar) {
       return res.status(404).json({ error: 'Car not found' });
     }
 
-    return res.status(200).json({ message: 'Car updated successfully', updatedCar });
+  }
+  else {
+    return res.status(404).json("You have no such authorization")
+  }
+  }
+
+
+
+    return res.status(200).json({ message: 'Car updated successfully'});
   } catch (error) {
     console.error(`Error updating car: ${error.message}`, error);
     return res.status(500).json({ error: 'Internal server error' });
   }
   }
+
+
+  exports.insertNewCar = async (req,res) => {
+    try {
+      const admin_id = req.user.id;
+      const role = req.user.role;
+
+      const request = req.body;
+      // Insert data with authenticated role
+     if(admin_id && role){
+      if(role==="super_admin"){
+      const newCar = new CarModel(request);
+      newCar.save()
+      .
+      then(() =>{
+        return res.status(201).json({message: 'Inserted new car successfully' });
+      }).catch((err) =>{
+        return res.status(400).json({error:err});
+      }) 
+    }
+    else{
+      return res.status(400).json("You have no such authorization")
+    }
+  }
+
+    } catch(err){
+      console.log(err);
+      return res.status(400).json({error:err});
+    }
+  }
+
+  exports.deleteExistingCar = async (req,res) => {
+    try {
+      const admin_id = req.user.id;
+      const role = req.user.role;
+      const carId = req.params.carId;
+
+      if(admin_id && role){
+        if(role==="super_admin"){
+      const removedCar = await CarModel.findByIdAndDelete(carId);
+  
+      if (!removedCar) {
+        return res.status(404).json({ message: 'Car not found' });
+      }
+  
+      return res.status(200).json({ message: 'Car deleted successfully', removedCar });
+    }
+    else {
+      return res.status(400).json("You have no such authorization")
+    }
+  }
+
+    } catch (error) {
+      return res.status(500).json({ message: 'Error deleting car', error });
+    }
+  };

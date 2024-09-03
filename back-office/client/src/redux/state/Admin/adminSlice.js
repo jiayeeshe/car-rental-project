@@ -47,9 +47,25 @@ export const insertNewCar = createAsyncThunk(
     "admin/insertNewCar",
     async (params, thunkAPI) => {
         try{
-            const {} = params;
+            console.log(params)
+            const request = params;
+            await new Promise(resolve => setTimeout(resolve, 3000));
+            const response = await axios.post(`http://localhost:3001/api/admins/insertNewCar`, request);
+            return response.data;
+        } catch (err){
+            return thunkAPI.rejectWithValue(err.response.data);
+        }
+    }
+)
+
+export const deleteExistingCar = createAsyncThunk(
+    "admin/deleteExistingCar",
+    async (params, thunkAPI) => {
+        try{
+            const carId = params;
+            // car id
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const response = await axios.post(`http://localhost:3001/api/admins/updateNewCar`);
+            const response = await axios.post(`http://localhost:3001/api/admins/deleteExistingCar/${carId}`);
             return response.data;
         } catch (err){
             return thunkAPI.rejectWithValue(err.response.data);
@@ -111,12 +127,27 @@ const adminSlice = createSlice({
         })
         .addCase(insertNewCar.fulfilled, (state, action) => {
             state.isLoading = false;
+            console.log(`the isloading is ${state.isLoading}`)
             console.log("insert Successfully");
         })
         .addCase(insertNewCar.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload; // Set the error message from response
                 console.log("insert failed");
+        })
+        .addCase(deleteExistingCar.pending, (state) => {
+            state.isLoading = true;
+            state.error = null;
+            console.log("removed existing car pending");
+        })
+        .addCase(deleteExistingCar.fulfilled, (state, action) => {
+            state.isLoading = false;
+            console.log("removed Successfully");
+        })
+        .addCase(deleteExistingCar.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.payload; // Set the error message from response
+                console.log("removed failed");
         })
     }
 })

@@ -38,6 +38,7 @@ export const BookingCar = () => {
     }, [carid, cars, dispatch])
 
 
+
   const disableBookedDates = (car) => {
     const bookedTimeSlots = car.bookedTimeSlots;
     
@@ -111,9 +112,6 @@ export const BookingCar = () => {
       }
     }
 
-
-
-
      // Calculate the total fare when start or end date changes
   useEffect(() => {
     if (startDate && endDate && car) {
@@ -133,11 +131,11 @@ export const BookingCar = () => {
         {isLoading && (<div className='d-flex justify-content-lg-center justify-content-center justify-content-md-center justify-content-sm-center align-items-center align-items-lg-center'><Spinner/></div>)}
         { car &&
         <div className=''> 
-        <div class="row d-lg-flex d-md-flex d-sm-flex">
-          <div class="d-flex col-lg-10 col-md-10 col-sm-12 col-12  justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center align-content-lg-center align-content-md-center align-content-sm-center align-content-center"  style={{height:'25vh'}}>            
+        <div className="row d-lg-flex d-md-flex d-sm-flex">
+          <div className="d-flex col-lg-10 col-md-10 col-sm-12 col-12  justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center align-content-lg-center align-content-md-center align-content-sm-center align-content-center"  style={{height:'25vh'}}>            
           <img alt="carimage" src={car.image} className='h-auto' style={{maxHeight: '100%', maxWidth: '100%'}}/>
           </div>
-          <div class="col-lg-10 col-md-12 col-sm-12 col-12" style={{height:'25vh'}}>            
+          <div className="col-lg-10 col-md-12 col-sm-12 col-12" style={{height:'25vh'}}>            
             <div className='text-capitalize text-center text-lg-center text-md-center text-sm-center' style={{maxHeight:"100%"}}>
               <hr className='my-lg-4 my-md-4 my-sm-4 my-4'></hr>
               <p>Car name : {car.name} </p>
@@ -189,9 +187,7 @@ export const BookingCar = () => {
 
             </div>
 
-
           </div>
-          
 
 
               </div>

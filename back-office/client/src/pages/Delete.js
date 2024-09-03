@@ -4,82 +4,35 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllCars } from '../redux/state/Car/carSlice';
 import { Link } from 'react-router-dom';
 import { handleCapacityChange, handleRentPerDayChange, handleNameChange, handleImageChange } from '../utilities/carHandleUpdateChange'; // Adjust the path as needed
-import { updateCarDetails } from '../redux/state/Admin/adminSlice';
+import { deleteExistingCar, updateCarDetails } from '../redux/state/Admin/adminSlice';
 
-export const Update = () => {
-  const { admin } = useSelector(state => state.admins)
-  const { cars } = useSelector(state => state.cars);
-  const [ updateIsLoading, setUpdateIsLoading ] = useState({}); 
+export const Delete = () => {
+  const { cars, isLoading} = useSelector(state => state.cars);
+  const [carDeletingLoading, setCarDeletingLoading] = useState({});
   const dispatch = useDispatch();
   const [search, setSearch] = useState('');
   const [minPrice, setMinPrice] = useState(0); // Default minimum price
   const [maxPrice, setMaxPrice] = useState(Infinity); // Default maximum price
-  const [newCarImage, setNewImage] = useState({});
-  const [originalCarInfo, setOriginalCarInfo] = useState({});
 
   useEffect(() => {
     dispatch(getAllCars());
   }, [dispatch]);
 
-  useEffect(() => {
-    const normalizedCarInfo = cars.reduce((acc, car) => {
-      acc[car._id] = car;
-      return acc;
-    }, {});
-    
-    // Initialize the car data and original data
-    setOriginalCarInfo(normalizedCarInfo);
-  }, [cars]);
+//   useEffect(() => {
+//     setCarsInfos(cars)
+//   }, [cars]);
 
-  const handleSubmit = async (e, car) =>{
-    e.preventDefault();
-    setUpdateIsLoading({[car._id]: true});
-    let carId = car._id;
-    const formData = new FormData(e.target);
-    let name = "";
-    let carRentPerDay = 0;
-    let capacity = 0;
-    let fuelType = "";
-    // Example: Retrieve values
-    !formData.get('name') ? name = car.name : name = formData.get('name'); 
-    !formData.get('rent') ? carRentPerDay = car.rentPerDay : carRentPerDay = formData.get('rent'); 
-    !formData.get('capacity') ? capacity = car.capacity : capacity = formData.get('capacity'); 
-    !formData.get('fuelType') ? fuelType = car.fuelType : fuelType = formData.get('fuelType'); 
+  const handleSubmit = async (e, carId) =>{
+        e.preventDefault();
 
+        setCarDeletingLoading({[carId]: true})
 
-    console.log(`name: ${name}, rent: ${carRentPerDay}, capacity: ${capacity}`)
-    
-    const currentCarInfo = {
-      name : name,
-      rentPerDay : carRentPerDay,
-      capacity : capacity,
-      image : newCarImage[carId],
-      fuelType : fuelType
-      
-    }
-
-
-
-    // Compare current values with original values
-    const modifiedFields = {};
-    // const currentCarInfo = newCarInfo[carId];
-    const originalCarInfoForId = originalCarInfo[carId];
-
-    for (const key in currentCarInfo) {
-      if (currentCarInfo[key] !== originalCarInfoForId[key]) {
-        modifiedFields[key] = currentCarInfo[key];
-      }
-    }
-        // Pass only modified fields
-        console.log('Modified fields:', modifiedFields);
-
-
-        const response = await dispatch(updateCarDetails({carId, modifiedFields}));
+        const response = await dispatch(deleteExistingCar(carId));
         if(response){
-          alert("Updated Succesfully");
-          setUpdateIsLoading({[car._id]: false});
-
+          alert("Removed Succesfully");
+          setCarDeletingLoading({[carId]: false})
         }
+        await dispatch(getAllCars());
   }
 
   return (
@@ -132,12 +85,12 @@ export const Update = () => {
               >
                 <div className='container-lg container-md container-sm container shadow' style={{maxWidth:"100%"}}>
                   <div className='d-lg-flex d-md-flex d-sm-flex d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center'style={{maxWidth:"100%"}}>
-                  <img src={ (newCarImage && newCarImage[car._id]) || car.image} className='carimg' alt={car.name} />
+                  <img src={car.image} className='carimg' alt={car.name} />
                   </div>
                   <div className='row d-lg-flex d-md-flex d-sm-flex d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center'style={{maxWidth:"100%"}} >
                       <div className='row col-lg-12 col-md-12 col-sm-12 col-12 d-lg-flex d-md-flex d-sm-flex d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center'>
         
-                      <form onSubmit={(e)=> handleSubmit(e, car)}>
+                      <form onSubmit={(e)=> handleSubmit(e, car._id)}>
                       <div className="mb-3">
                           <input
                             accept="image/*"
@@ -146,7 +99,7 @@ export const Update = () => {
                             name="image"
                             id="image"
                             // value=image
-                            onChange={(e) => handleImageChange(e, car._id, setNewImage)}
+                            readOnly
                           />
                         </div>
                         <div className="mb-3">
@@ -157,6 +110,7 @@ export const Update = () => {
                             name="name"
                             id="carName"
                             placeholder={car.name}
+                            readOnly
                           />
                         </div>
 
@@ -168,6 +122,7 @@ export const Update = () => {
                             name="fuelType"
                             id="fuelType"
                             placeholder={car.fuelType}
+                            readOnly
                           />
                         </div>
 
@@ -179,6 +134,7 @@ export const Update = () => {
                             name="capacity"
                             id="capacity"
                             placeholder={car.capacity}
+                            readOnly
                           />
                         </div>
 
@@ -190,12 +146,13 @@ export const Update = () => {
                             name="rent"
                             id="rent"
                             placeholder={car.rentPerDay}
+                            readOnly
                           />
                         </div>
 
                         <div className="mb-3">
-                        <button type="submit" className="btn btn-primary w-100" disabled={updateIsLoading[car._id]}>
-                          {updateIsLoading[car._id] ? "Updating..." : "Update"}
+                        <button type="submit" className="btn btn-danger w-100" disabled={carDeletingLoading[car._id]}>
+                           {carDeletingLoading[car._id] ? "Removing..." : "Remove"}  
                         </button>
                         {/* <p className='text-danger text-center'>{admin.error && admin.error.message}</p> */}
                         </div>

@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import { Home } from './pages/Home';
 import { Update } from './pages/Update';
 import { Insert } from './pages/Insert';
+import { Delete } from './pages/Delete';
+
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/login" exact element={<Login/>}/>
           <Route path='/update' exact element={<ProtectedRoute><Update/></ProtectedRoute>}/>
           <Route path='/insert' exact element={<ProtectedRoute><Insert/></ProtectedRoute>}/>
+          <Route path='/delete' exact element={<ProtectedRoute><Delete/></ProtectedRoute>}/>
+
 
         </Routes>
       </Router>

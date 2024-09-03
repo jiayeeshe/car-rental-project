@@ -5,6 +5,8 @@ import { Register } from './pages/Register';
 import { Login } from './pages/Login';
 import { BookingCar } from './pages/BookingCar';
 import { BookingSuccess } from './pages/BookingSuccess';
+import { BookingHistory } from './pages/BookingHistory';
+
 import { useSelector } from 'react-redux';
 import { Test } from  './pages/Test';
 
@@ -19,6 +21,8 @@ function App() {
           <Route path="/bookingsuccess" element={<ProtectedRoute><BookingSuccess /></ProtectedRoute>} />
           <Route path="/booking" element={<ProtectedRoute><BookingCar /></ProtectedRoute>} />
           <Route path="/booking/:carid" exact element={<ProtectedRoute><BookingCar /></ProtectedRoute>}/>
+          <Route path="/bookinghistory" element={<ProtectedRoute><BookingHistory/></ProtectedRoute>} />
+
         </Routes>
       </Router>
     </div>

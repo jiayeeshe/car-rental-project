@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import DefaultLayout from '../components/DefaultLayout'
 import emptyImage from '../data/images/emptyimage.png';
 import { handleCapacityChange, handleRentPerDayChange, handleNameChange, handleImageChange } from '../utilities/carHandleInsertChange'; // Adjust the path as needed
+import { insertNewCar } from '../redux/state/Admin/adminSlice';
 
 
 
@@ -14,8 +15,9 @@ export const Insert = () => {
     const [carRentPerDay, setCarRentPerDay] = useState(0);
     const [carCapacity, setCarCapacity] = useState(0);
     const dispatch = useDispatch();
+    const  admin = useSelector(state => state.admins);
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault();
         const formData = new FormData(e.target);
 
@@ -23,22 +25,24 @@ export const Insert = () => {
         const name = formData.get('name'); // Get value of input with name="name"
         const carRentPerDay = formData.get('rent'); // Get value of input with name="name"
         const capacity = formData.get('capacity'); // Get value of input with name="name"
-
-        // const email = formData.get(''); // Get value of input with name="email"
+        const fuelType = formData.get('fuelType'); // Get value of input with name="email"
       
-        console.log('Name:', name);
-        console.log('carRentPerDay:', carRentPerDay);
-        console.log('capacity:', capacity);
 
         const request = {
             image : carImage,
             name : name,
             rentPerDay : carRentPerDay,
             capacity : capacity,
+            fuelType: fuelType,
         }
 
         console.log('request:', request);
-       
+        
+        const response = await dispatch(insertNewCar(request));
+        console.log(response);
+        if(response){
+          alert("Inserted Succesfully!");
+        }
       }
 
 
@@ -67,10 +71,11 @@ export const Insert = () => {
               <input
                 accept="image/*"
                 type="file"
+                name="image"
                 className="form-control"
                 id="image"
                 required
-                onChange={(e) => handleImageChange(e, setCarImage)}
+                onChange={(e)=>{handleImageChange(e, setCarImage)}}
               />
             </div>
             <div className="mb-3">
@@ -82,21 +87,21 @@ export const Insert = () => {
                 id="carName"
                 placeholder="Insert Car Name"
                 required
-                onChange={(e) => handleNameChange(e, setCarName)}
               />
             </div>
+
             <div className="mb-3">
-              <label htmlFor="text" className="form-label">Rent Per Day</label>
+            <label htmlFor="text" className="form-label">Fuel Type</label>
               <input
-                type="number"
-                name="rent"
+                type="text"
+                name="fuelType"
                 className="form-control"
-                id="rentPerDay"
+                id="fuelType"
+                placeholder="fuel type"
                 required
-                onChange={(e) => handleRentPerDayChange(e, setCarRentPerDay)}
-                placeholder="$$$$"
               />
             </div>
+
             <div className="mb-3">
               <label htmlFor="text" className="form-label">capacity</label>
               <input
@@ -106,13 +111,23 @@ export const Insert = () => {
                 id="capacity"
                 placeholder= "Number?"
                 required
-                onChange={(e) => handleCapacityChange(e, setCarCapacity)}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="text" className="form-label">Rent Per Day</label>
+              <input
+                type="number"
+                name="rent"
+                className="form-control"
+                id="rentPerDay"
+                required
+                placeholder="$$$$"
               />
             </div>
             <div className="mb-3">
-            <button type="submit" className="btn btn-primary w-100">
-              {/* {admin.isLoading ? "Loading..." : "login"}  disabled={admin.isLoading}*/ }
-              Insert
+            <button type="submit" className="btn btn-primary w-100" disabled={admin.isLoading}>
+               {admin.isLoading ? "Inserting.." : "Insert"}  
             </button>
             {/* <p className='text-danger text-center'>{admin.error && admin.error.message}</p> */}
             </div>
