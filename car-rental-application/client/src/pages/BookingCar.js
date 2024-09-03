@@ -22,30 +22,6 @@ export const BookingCar = () => {
   const [bookedDates, setBookedDates] = useState([]);
   const navigate = useNavigate(); // Hook for navigation
 
-  // useEffect( () => {
-
-  //   const fetchCars = async ()=>{
-  //   const actionStatus = await dispatch(getAllCars());
-  //   if(getAllCars.fulfilled.match(actionStatus)){
-  //     if(cars.length>0){
-  //       const selected_car = cars.find(o=> o._id ===carid)
-  //       setCar(selected_car);
-
-  //     }
-  //   }
-  // }
-  //   // Only fetch cars if the cars array is empty
-  //   if(cars.length===0){
-  //   fetchCars();
-  //   }
-  //   else{
-  //   // If cars are already loaded, find the selected car
-  //   const selected_car = cars.find(o => o._id === carid);
-  //   setCar(selected_car);
-  //   }
-  // }, [carid, dispatch, cars])
-
-
   useEffect( () => {
 
     if(cars.length===0){
@@ -145,7 +121,7 @@ export const BookingCar = () => {
       const timeDiff = endDate.getTime() - startDate.getTime();
       const dayCount = Math.ceil(timeDiff / (1000 * 3600 * 24)); // Convert milliseconds to days
       // Calculate the total fare
-      const calculatedFare = dayCount * car.rentPerHour;
+      const calculatedFare = dayCount * car.rentPerDay;
       setTotalDay(dayCount)
       setTotalFare(calculatedFare); // Set the total fare
     }
@@ -164,8 +140,8 @@ export const BookingCar = () => {
           <div class="col-lg-10 col-md-12 col-sm-12 col-12" style={{height:'25vh'}}>            
             <div className='text-capitalize text-center text-lg-center text-md-center text-sm-center' style={{maxHeight:"100%"}}>
               <hr className='my-lg-4 my-md-4 my-sm-4 my-4'></hr>
-              <p>car name : {car.name} </p>
-              <p>car rentPerHour: {car.rentPerHour}</p>
+              <p>Car name : {car.name} </p>
+              <p>Rent per day: ${car.rentPerDay}</p>
               <p>Fuel type : {car.fuelType}</p>
               <p>Max Persons :</p>
               <hr className='my-lg-4 my-md-4 my-sm-4 my-4'></hr>
@@ -205,10 +181,10 @@ export const BookingCar = () => {
                <hr className='my-lg-4 my-md-4 my-sm-4 my-4'></hr>
                <div>Fare calculation</div>
                <div>Total Days: {endDate && startDate ? Math.ceil((endDate - startDate) / (1000 * 3600 * 24)) : 0}</div>
-               <div>Rent per day: {car.rentPerHour}</div>
+               <div>Rent per day: ${car.rentPerDay}</div>
                <div>Total Fare: ${totalFare}</div>
-               <div>
-                <button className='btn' onClick={bookNow}> Pay now </button>
+               <div className='mt-2 mt-lg-2 mt-md-2 mt-sm-2'>
+                <button className='btn btn-success btn-lg' onClick={bookNow}> Pay now </button>
                </div>
 
             </div>

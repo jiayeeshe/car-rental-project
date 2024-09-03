@@ -30,9 +30,9 @@ const Navbar = () => {
                                 <Link to="/login" className="nav-link active d-flex justify-content-center">Login</Link>
                                 </li>
                                 }
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                 <Link to="/booking" className="nav-link active d-flex justify-content-center">Booking</Link>
-                                </li>
+                                </li> */}
                             </ul>
                                 {user.isAuthenticated &&
                             <div className='d-lg-flex d-md-flex justify-content-lg-end justify-content-md-center'>

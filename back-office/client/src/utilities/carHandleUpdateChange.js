@@ -31,19 +31,20 @@ export const handleNameChange = (e, carId, setNewCarInfo) =>{
     },
   }));
 }
- export const handleImageChange = (e, carId, setNewCarInfo) => {
+ export const handleImageChange = (e, carId, setNewImage) => {
     const file = e.target.files[0];
     const reader = new FileReader();
 
     reader.onloadend = () => {
       // Update the image for the specific car
-      setNewCarInfo(prevState => ({
-        ...prevState,
-        [carId]: {
-          ...prevState[carId], // Contains name, fuelType, and other details
-          image: reader.result // Update the image field with the Base64 string
-        },
-      }));
+      // setNewCarInfo(prevState => ({
+      //   ...prevState,
+      //   [carId]: {
+      //     ...prevState[carId], // Contains name, fuelType, and other details
+      //     image: reader.result // Update the image field with the Base64 string
+      //   },
+      // }));
+      setNewImage({[carId]: reader.result});
     };
     if (file) {
       reader.readAsDataURL(file);

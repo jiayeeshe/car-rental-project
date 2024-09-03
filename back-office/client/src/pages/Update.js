@@ -12,7 +12,7 @@ export const Update = () => {
   const [search, setSearch] = useState('');
   const [minPrice, setMinPrice] = useState(0); // Default minimum price
   const [maxPrice, setMaxPrice] = useState(Infinity); // Default maximum price
-  const [newCarInfo, setNewCarInfo] = useState({});
+  const [newCarImage, setNewImage] = useState({});
   const [originalCarInfo, setOriginalCarInfo] = useState({});
 
   useEffect(() => {
@@ -26,16 +26,33 @@ export const Update = () => {
     }, {});
     
     // Initialize the car data and original data
-    setNewCarInfo(normalizedCarInfo);
     setOriginalCarInfo(normalizedCarInfo);
   }, [cars]);
 
   const handleSubmit = async (e, carId) =>{
     e.preventDefault();
 
+    const formData = new FormData(e.target);
+
+    // Example: Retrieve values
+    const name = formData.get('name'); // Get value of input with name="name"
+    const carRentPerDay = formData.get('rent'); // Get value of input with name="name"
+    const capacity = formData.get('capacity'); // Get value of input with name="name"
+    console.log(`name: ${name}, rent: ${carRentPerDay}, capacity: ${capacity}`)
+    
+    const currentCarInfo = {
+      name : name,
+      rentPerDay : carRentPerDay,
+      capacity : capacity,
+      image : newCarImage[carId],
+      
+    }
+
+
+
     // Compare current values with original values
     const modifiedFields = {};
-    const currentCarInfo = newCarInfo[carId];
+    // const currentCarInfo = newCarInfo[carId];
     const originalCarInfoForId = originalCarInfo[carId];
 
     for (const key in currentCarInfo) {
@@ -45,6 +62,8 @@ export const Update = () => {
     }
         // Pass only modified fields
         console.log('Modified fields:', modifiedFields);
+
+
         const response = await dispatch(updateCarDetails({carId, modifiedFields}));
         if(response){
           alert("Updated Succesfully");
@@ -101,7 +120,7 @@ export const Update = () => {
               >
                 <div className='container-lg container-md container-sm container shadow' style={{maxWidth:"100%"}}>
                   <div className='d-lg-flex d-md-flex d-sm-flex d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center'style={{maxWidth:"100%"}}>
-                  <img src={(newCarInfo[car._id] && newCarInfo[car._id].image) || car.image} className='carimg' alt={car.name} />
+                  <img src={ (newCarImage && newCarImage[car._id]) || car.image} className='carimg' alt={car.name} />
                   </div>
                   <div className='row d-lg-flex d-md-flex d-sm-flex d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center'style={{maxWidth:"100%"}} >
                       <div className='row col-lg-12 col-md-12 col-sm-12 col-12 d-lg-flex d-md-flex d-sm-flex d-flex justify-content-lg-center justify-content-md-center justify-content-sm-center justify-content-center'>
@@ -112,9 +131,10 @@ export const Update = () => {
                             accept="image/*"
                             type="file"
                             className="form-control"
+                            name="image"
                             id="image"
                             // value=image
-                            onChange={(e) => handleImageChange(e, car._id, setNewCarInfo)}
+                            onChange={(e) => handleImageChange(e, car._id, setNewImage)}
                           />
                         </div>
                         <div className="mb-3">
@@ -122,28 +142,28 @@ export const Update = () => {
                           <input
                             type="text"
                             className="form-control"
+                            name="name"
                             id="carName"
                             placeholder={car.name}
-                            onChange={(e) => handleNameChange(e, car._id, setNewCarInfo)}
                           />
                         </div>
                         <div className="mb-3">
-                          <label htmlFor="text" className="form-label">Rent Per Day</label>
+                          <label htmlFor="number" className="form-label">Rent Per Day</label>
                           <input
                             type="text"
                             className="form-control"
-                            id="rentPerDay"
-                            onChange={(e) => handleRentPerDayChange(e, car._id, setNewCarInfo)}
+                            name="rent"
+                            id="rent"
                             placeholder={car.rentPerDay}
                           />
                         </div>
                         <div className="mb-3">
-                          <label htmlFor="text" className="form-label">capacity</label>
+                          <label htmlFor="number" className="form-label">capacity</label>
                           <input
                             type="text"
                             className="form-control"
+                            name="capacity"
                             id="capacity"
-                            onChange={(e) => handleCapacityChange(e, car._id, setNewCarInfo)}
                             placeholder={car.capacity}
                           />
                         </div>
