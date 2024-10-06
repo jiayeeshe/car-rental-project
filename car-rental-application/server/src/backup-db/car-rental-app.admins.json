@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "66d5361bca3aa9fad61d8056"
+  },
+  "adminID": "admin1234",
+  "adminName": "jiayeee",
+  "password": "$2b$10$dXPMABx/tcEXCweVlQV5fOItoeX1DksMDhY90UozDq0U/R4ZZXbry",
+  "role": "super_admin",
+  "__v": 0
+}]

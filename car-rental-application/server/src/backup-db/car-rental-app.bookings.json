@@ -1,0 +1,1155 @@
+[{
+  "_id": {
+    "$oid": "66d49bb5e1e3f5b2d23380c8"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:51:51.412Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:51:51.000Z"
+      },
+      "_id": {
+        "$oid": "66d49bb5e1e3f5b2d23380c9"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T16:52:05.988Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T16:52:05.988Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49d6be1e3f5b2d23380ce"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:59:01.037Z"
+      },
+      "to": {
+        "$date": "2024-09-03T16:59:01.000Z"
+      },
+      "_id": {
+        "$oid": "66d49d6be1e3f5b2d23380cf"
+      }
+    }
+  ],
+  "totalDay": 2,
+  "totalFare": 1600,
+  "createdAt": {
+    "$date": "2024-09-01T16:59:23.830Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T16:59:23.830Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49df8e1e3f5b2d23380d4"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T17:01:38.801Z"
+      },
+      "to": {
+        "$date": "2024-09-02T17:01:38.000Z"
+      },
+      "_id": {
+        "$oid": "66d49df8e1e3f5b2d23380d5"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:01:44.993Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:01:44.993Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49e15e1e3f5b2d23380d9"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-02T17:01:56.000Z"
+      },
+      "to": {
+        "$date": "2024-09-03T17:01:56.000Z"
+      },
+      "_id": {
+        "$oid": "66d49e15e1e3f5b2d23380da"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:02:13.913Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:02:13.913Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49e75e1e3f5b2d23380df"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-04T17:03:40.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T17:03:40.000Z"
+      },
+      "_id": {
+        "$oid": "66d49e75e1e3f5b2d23380e0"
+      }
+    }
+  ],
+  "totalDay": 2,
+  "totalFare": 1600,
+  "createdAt": {
+    "$date": "2024-09-01T17:03:49.787Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:03:49.787Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49ed8e1e3f5b2d23380e5"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-07T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-09T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49ed8e1e3f5b2d23380e6"
+      }
+    }
+  ],
+  "totalDay": 2,
+  "totalFare": 1600,
+  "createdAt": {
+    "$date": "2024-09-01T17:05:28.524Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:05:28.524Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49ef9e1e3f5b2d23380eb"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-11T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-12T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49ef9e1e3f5b2d23380ec"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:06:01.130Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:06:01.130Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49f06e1e3f5b2d23380f0"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-10T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-11T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49f06e1e3f5b2d23380f1"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:06:14.447Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:06:14.447Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49f1be1e3f5b2d23380f5"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-13T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-15T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49f1be1e3f5b2d23380f6"
+      }
+    }
+  ],
+  "totalDay": 2,
+  "totalFare": 1600,
+  "createdAt": {
+    "$date": "2024-09-01T17:06:35.665Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:06:35.665Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49f2de1e3f5b2d23380fa"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-18T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-29T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49f2de1e3f5b2d23380fb"
+      }
+    }
+  ],
+  "totalDay": 11,
+  "totalFare": 8800,
+  "createdAt": {
+    "$date": "2024-09-01T17:06:53.092Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:06:53.092Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49f3be1e3f5b2d23380ff"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-16T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-17T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49f3be1e3f5b2d2338100"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:07:07.037Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:07:07.037Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49f874a374a9223dcda9d"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-10-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-04T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49f874a374a9223dcda9e"
+      }
+    }
+  ],
+  "totalDay": 3,
+  "totalFare": 2400,
+  "createdAt": {
+    "$date": "2024-09-01T17:08:23.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:08:23.589Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49fa44a374a9223dcdaa2"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-30T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-01T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49fa44a374a9223dcdaa3"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:08:52.909Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:08:52.909Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d49fb04a374a9223dcdaa7"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-10-07T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-11T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d49fb04a374a9223dcdaa8"
+      }
+    }
+  ],
+  "totalDay": 4,
+  "totalFare": 3200,
+  "createdAt": {
+    "$date": "2024-09-01T17:09:04.856Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:09:04.856Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a2f44a374a9223dcdaae"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-10-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-06T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a2f44a374a9223dcdaaf"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:23:00.664Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:23:00.664Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a34c4a374a9223dcdab3"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-10-12T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-13T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a34c4a374a9223dcdab4"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:24:28.219Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:24:28.219Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a46ab919dc71acf75dcb"
+  },
+  "car": {
+    "$oid": "63dcd7252791b8c1e4c14846"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a46ab919dc71acf75dcc"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 500,
+  "createdAt": {
+    "$date": "2024-09-01T17:29:14.173Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:29:14.173Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a4a4b919dc71acf75dd0"
+  },
+  "car": {
+    "$oid": "63dcd7252791b8c1e4c14846"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a4a4b919dc71acf75dd1"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 500,
+  "createdAt": {
+    "$date": "2024-09-01T17:30:12.946Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:30:12.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a7deb919dc71acf75dde"
+  },
+  "car": {
+    "$oid": "63dcd5272791b8c1e4c1482d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a7deb919dc71acf75ddf"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 200,
+  "createdAt": {
+    "$date": "2024-09-01T17:43:58.911Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:43:58.911Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a820b919dc71acf75de3"
+  },
+  "car": {
+    "$oid": "63dcd80f2791b8c1e4c14849"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a820b919dc71acf75de4"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:45:04.417Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:45:04.417Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a889b919dc71acf75de8"
+  },
+  "car": {
+    "$oid": "63dcd5272791b8c1e4c1482d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-07T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a889b919dc71acf75de9"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 200,
+  "createdAt": {
+    "$date": "2024-09-01T17:46:49.456Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:46:49.456Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a8ceb919dc71acf75ded"
+  },
+  "car": {
+    "$oid": "6406d47ff4c60bf7442cc360"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-24T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-25T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a8ceb919dc71acf75dee"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 200,
+  "createdAt": {
+    "$date": "2024-09-01T17:47:58.875Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:47:58.875Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a8e6b919dc71acf75df2"
+  },
+  "car": {
+    "$oid": "63dcd5272791b8c1e4c1482d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a8e6b919dc71acf75df3"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 200,
+  "createdAt": {
+    "$date": "2024-09-01T17:48:22.494Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:48:22.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a917b919dc71acf75df7"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-10-14T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-15T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a917b919dc71acf75df8"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:49:11.734Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:49:11.734Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a940b919dc71acf75dfc"
+  },
+  "car": {
+    "$oid": "63dcd5272791b8c1e4c1482d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a940b919dc71acf75dfd"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 200,
+  "createdAt": {
+    "$date": "2024-09-01T17:49:52.389Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:49:52.389Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4a97cb919dc71acf75e01"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-10-16T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-17T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4a97cb919dc71acf75e02"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 800,
+  "createdAt": {
+    "$date": "2024-09-01T17:50:52.508Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:50:52.508Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4aa26b919dc71acf75e06"
+  },
+  "car": {
+    "$oid": "63dcd6632791b8c1e4c14840"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4aa26b919dc71acf75e07"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 500,
+  "createdAt": {
+    "$date": "2024-09-01T17:53:42.687Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:53:42.687Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4aa7bb919dc71acf75e0c"
+  },
+  "car": {
+    "$oid": "63dcd5db2791b8c1e4c14838"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4aa7bb919dc71acf75e0d"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 600,
+  "createdAt": {
+    "$date": "2024-09-01T17:55:07.804Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:55:07.804Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4aaebb919dc71acf75e11"
+  },
+  "car": {
+    "$oid": "63dcd6932791b8c1e4c14843"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4aaebb919dc71acf75e12"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 400,
+  "createdAt": {
+    "$date": "2024-09-01T17:56:59.726Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:56:59.726Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4ab20b919dc71acf75e16"
+  },
+  "car": {
+    "$oid": "63dcd7252791b8c1e4c14846"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4ab20b919dc71acf75e17"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 500,
+  "createdAt": {
+    "$date": "2024-09-01T17:57:52.966Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:57:52.966Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4ab31b919dc71acf75e1b"
+  },
+  "car": {
+    "$oid": "63dcd6932791b8c1e4c14843"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4ab31b919dc71acf75e1c"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 400,
+  "createdAt": {
+    "$date": "2024-09-01T17:58:09.214Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:58:09.214Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d4aba6b919dc71acf75e20"
+  },
+  "car": {
+    "$oid": "63dcd7252791b8c1e4c14846"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-09T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-10T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d4aba6b919dc71acf75e21"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 500,
+  "createdAt": {
+    "$date": "2024-09-01T18:00:06.039Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T18:00:06.039Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d6b9fcd5478099427e50c1"
+  },
+  "car": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-10-18T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-19T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d6b9fcd5478099427e50c2"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 1200,
+  "createdAt": {
+    "$date": "2024-09-03T07:25:48.619Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T07:25:48.619Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d71acd5f7222ebb48c2a22"
+  },
+  "car": {
+    "$oid": "66d7154b5f7222ebb48c29f0"
+  },
+  "user": {
+    "$oid": "66d472bcaeb74f6f6eb2f69a"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d71acd5f7222ebb48c2a23"
+      }
+    }
+  ],
+  "totalDay": 2,
+  "totalFare": 1998,
+  "createdAt": {
+    "$date": "2024-09-03T14:18:53.900Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T14:18:53.900Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d71b88cea515e0439730a4"
+  },
+  "car": {
+    "$oid": "66d7154b5f7222ebb48c29f0"
+  },
+  "user": {
+    "$oid": "66d71b6ecea515e0439730a0"
+  },
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "66d71b88cea515e0439730a5"
+      }
+    }
+  ],
+  "totalDay": 1,
+  "totalFare": 999,
+  "createdAt": {
+    "$date": "2024-09-03T14:22:00.729Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T14:22:00.729Z"
+  },
+  "__v": 0
+}]

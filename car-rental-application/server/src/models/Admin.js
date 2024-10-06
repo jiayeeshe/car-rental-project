@@ -1,12 +1,11 @@
-const mongoose = require('mongoose');
-
+const mongoose = require("mongoose");
 
 const AdminSchema = new mongoose.Schema({
     adminID: {
         type: String,
         required: true,
     },
-    adminName :{
+    adminName: {
         type: String,
         required: true,
     },
@@ -17,10 +16,9 @@ const AdminSchema = new mongoose.Schema({
     role: {
         type: String,
         required: true,
-    }
+    },
 });
 
-
-const AdminModel = mongoose.model('admins', AdminSchema);
+const AdminModel = mongoose.model("admins", AdminSchema);
 
 module.exports = AdminModel;

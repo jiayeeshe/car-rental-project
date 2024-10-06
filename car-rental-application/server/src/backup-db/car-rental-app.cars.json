@@ -1,0 +1,431 @@
+[{
+  "_id": {
+    "$oid": "63dcd6272791b8c1e4c1483d"
+  },
+  "name": "Honda Accord",
+  "image": "https://www.cars.com/i/large/in/v2/stock_photos/0b1cd8cb-6107-4177-85e3-e08c8254bfc0/54b857cc-1f98-4d32-bd95-6799196858ca.png",
+  "capacity": 4,
+  "fuelType": "Petrol",
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T17:01:38.801Z"
+      },
+      "to": {
+        "$date": "2024-09-02T17:01:38.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-02T17:01:56.000Z"
+      },
+      "to": {
+        "$date": "2024-09-03T17:01:56.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-04T17:03:40.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T17:03:40.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-07T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-09T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-11T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-12T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-10T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-11T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-13T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-15T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-18T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-29T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-16T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-17T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-04T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-30T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-01T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-07T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-11T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-06T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-12T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-13T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-14T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-15T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-16T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-17T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-18T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-19T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-02-03T09:38:47.159Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T07:25:48.662Z"
+  },
+  "__v": 0,
+  "rentPerDay": 1200
+},
+{
+  "_id": {
+    "$oid": "63dcd6932791b8c1e4c14843"
+  },
+  "name": "Toyota Yaris",
+  "image": "https://www.toyotaravi.com/wp-content/uploads/2015/12/super-white.png",
+  "capacity": 5,
+  "fuelType": "Petrol",
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-02-03T09:40:35.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:58:09.245Z"
+  },
+  "__v": 0,
+  "rentPerDay": 400
+},
+{
+  "_id": {
+    "$oid": "63dcd5272791b8c1e4c1482d"
+  },
+  "name": "Honda",
+  "image": "https://www.honda.com.pk/images/landingimages/images/city/city1.2.png",
+  "capacity": 5,
+  "fuelType": "petrol ",
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-07T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-02-03T09:34:31.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T13:55:00.991Z"
+  },
+  "__v": 0,
+  "rentPerDay": 210
+},
+{
+  "_id": {
+    "$oid": "63dcd6632791b8c1e4c14840"
+  },
+  "name": "Toyota GLI",
+  "image": "https://www.cars.com/i/large/in/v2/stock_photos/8846c3e8-64b9-42ee-a8dd-abac32f32a99/adde77db-686b-4efd-a8e8-ca828897d633.png",
+  "capacity": 5,
+  "fuelType": "Petrol",
+  "bookedTimeSlots": [
+    {
+      "from": "Feb 03 2023 14:47",
+      "to": "Feb 04 2023 14:47",
+      "_id": {
+        "$oid": "63dcd9be2791b8c1e4c14850"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-04T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-08T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-10-09T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-10-10T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-02-03T09:39:47.144Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-04T07:34:53.008Z"
+  },
+  "__v": 1,
+  "rentPerDay": 500
+},
+{
+  "_id": {
+    "$oid": "63dcd80f2791b8c1e4c14849"
+  },
+  "name": "Lexus ls2000",
+  "image": "https://images.dealer.com/ddc/vehicles/2022/Lexus/LS%20500/Sedan/still/front-left/front-left-640-en_US.jpg",
+  "capacity": 5,
+  "fuelType": "High Octane",
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-02-03T09:46:55.434Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:45:04.450Z"
+  },
+  "__v": 0,
+  "rentPerDay": 800
+},
+{
+  "_id": {
+    "$oid": "63dcd7252791b8c1e4c14846"
+  },
+  "name": "Toyota Camry",
+  "image": "https://www.buyatoyota.com/assets/img/vehicle-info/Camry/2023/hero_image_camry.png",
+  "capacity": 4,
+  "fuelType": "Diesel",
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-03T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-09T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-10T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-02-03T09:43:01.776Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T18:00:06.076Z"
+  },
+  "__v": 0,
+  "rentPerDay": 500
+},
+{
+  "_id": {
+    "$oid": "63dcd5db2791b8c1e4c14838"
+  },
+  "name": "Honda Vezzel",
+  "image": "https://www.honda.com.pk/images/hrv/hrv-vti-landingu.png",
+  "capacity": 6,
+  "fuelType": "Petrol",
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-01T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-02-03T09:37:31.925Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-01T17:55:07.885Z"
+  },
+  "__v": 0,
+  "rentPerDay": 600
+},
+{
+  "_id": {
+    "$oid": "66d7154b5f7222ebb48c29f0"
+  },
+  "name": "Toyota Camry",
+  "image": "data:image/png;base64,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",
+  "capacity": 4,
+  "fuelType": "petrol",
+  "rentPerDay": 999,
+  "bookedTimeSlots": [
+    {
+      "from": {
+        "$date": "2024-09-02T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-04T16:00:00.000Z"
+      }
+    },
+    {
+      "from": {
+        "$date": "2024-09-05T16:00:00.000Z"
+      },
+      "to": {
+        "$date": "2024-09-06T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-09-03T13:55:23.043Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-03T19:39:00.043Z"
+  },
+  "__v": 0
+}]

@@ -1,17 +1,16 @@
-const CarModel = require('../models/Cars');
+const CarModel = require("../models/Cars").default;
 
 exports.getAllCars = async (req, res) => {
     const cars = await CarModel.find();
-    if(!cars) return res.status(400).json({error: "The query is empty"});
-    else{
-      return res.send(cars);
+    if (!cars) return res.status(400).json({ error: "The query is empty" });
+    else {
+        return res.send(cars);
     }
-  };
+};
 
-
-  exports.updateCarTimeSlot = async (carId, newTimeSlot) => {
+exports.updateCarTimeSlot = async (carId, newTimeSlot) => {
     try {
-      console.log(`car id: ${carId} and newtimeslot : ${newTimeSlot}`);
+        console.log(`car id: ${carId} and newtimeslot : ${newTimeSlot}`);
         // Update the carModel with the new booking time slot
         const updatedCar = await CarModel.findOneAndUpdate(
             { _id: carId },

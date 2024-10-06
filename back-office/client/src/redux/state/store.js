@@ -4,12 +4,11 @@ import adminsReducer from './Admin/adminSlice';
 
 // import { alertsReducer } from './redux/state/Alert/alertSlice';
 
-
 const store = configureStore({
-  reducer: {
-    cars: carsReducer,
-    admins: adminsReducer,
-  },
-  });
+    reducer: {
+        cars: carsReducer,
+        admins: adminsReducer,
+    },
+});
 
 export default store;
